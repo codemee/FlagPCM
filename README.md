@@ -1,2 +1,2 @@
 # FlagPCM
-Playback PCM audio with only one timer on Arduino to make it compatible with Servo library.
+This is a modified version of damellis PCM library (https://github.com/damellis/PCM) to make it compatible with Servo library. Originally,the PCM library uses Timer 1 to drive interruppted playback of PCM.But Servo library also uses Timer 1 to send pulse waves to servo.So I change the PCM library to use timer 2 only.But it also changes playback of PCM into non-interrupt driven way.In other words,you have to wait for playback of PCM to do other things.
